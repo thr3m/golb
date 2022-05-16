@@ -1,6 +1,7 @@
 package cli
 
 import (
+	"bufio"
 	"fmt"
 	"log"
 	"os"
@@ -24,7 +25,7 @@ func HandleUserInput(argList []string) {
 	switch command {
 	case "init":
 		initBlog()
-	case "post":
+	case "create":
 		createPost()
 	case "delete":
 		fmt.Println("Deleting a post")
@@ -51,10 +52,10 @@ func initBlog() string {
 	fmt.Println("Let's init your new blog !")
 
 	fmt.Print("How would you want to name your blog ? (default : " + blogName + " ) : ")
-	fmt.Scanln(&blogName)
+	fmt.Scan(&blogName)
 
-	fmt.Print("Please provide a path where nojs will look for your blog (default : " + postDirectoryPath + " ) : ")
-	fmt.Scanln(&postDirectoryPath)
+	fmt.Print("Please provide a path where golb will look for your blog (default : " + postDirectoryPath + " ) : ")
+	fmt.Scan(&postDirectoryPath)
 
 	blogPath := filepath.Join(postDirectoryPath, blogName)
 
@@ -85,10 +86,29 @@ If no post title is provided, use a timestamp as a temporary title.
 */
 func createPost() {
 	var postTitle string
+	var postDescription string
 
 	fmt.Println("Create a post !")
+
 	fmt.Print("Enter a post title : ")
-	fmt.Scanln(&postTitle)
+	scanner := bufio.NewScanner(os.Stdin)
+
+	if scanner.Scan() {
+		postTitle = scanner.Text()
+	} else {
+		log.Fatal("Please provide a post name")
+	}
+
+	fmt.Print("Enter a short description of the blog post (default blank) : ")
+	if scanner.Scan() {
+		postDescription = scanner.Text()
+	}
+
+	err := helpers.CreatePost(postTitle, postDescription)
+
+	if err != nil {
+		fmt.Print("Couldn't create the post" + err.Error())
+	}
 
 	// postPath := helpers.GetPostsPath()
 	// fmt.Println(postPath)
