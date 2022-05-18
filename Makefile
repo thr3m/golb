@@ -1,4 +1,7 @@
 BASE_FILE=main.go
 
-run:
+init:
 	rm -rf ~/my_blog && go run ${BASE_FILE} init
+
+create:
+	go run ${BASE_FILE} create
