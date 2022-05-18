@@ -42,20 +42,30 @@ home directory named my_blog
 func initBlog() string {
 	user_os := runtime.GOOS
 	postDirectoryPath, err6 := os.UserHomeDir()
+	scanner := bufio.NewScanner(os.Stdin)
+	blogName := "my_blog"
 
 	if err6 != nil {
 		fmt.Print(err6.Error())
 	}
 
-	blogName := "my_blog"
-
 	fmt.Println("Let's init your new blog !")
 
 	fmt.Print("How would you want to name your blog ? (default : " + blogName + " ) : ")
-	fmt.Scan(&blogName)
+	if scanner.Scan() {
+		if scanner.Text() != "" {
+			blogName = scanner.Text()
+		}
+	} else {
+		log.Fatal("Please provide a post name")
+	}
 
 	fmt.Print("Please provide a path where golb will look for your blog (default : " + postDirectoryPath + " ) : ")
-	fmt.Scan(&postDirectoryPath)
+	if scanner.Scan() {
+		if scanner.Text() != "" {
+			postDirectoryPath = scanner.Text()
+		}
+	}
 
 	blogPath := filepath.Join(postDirectoryPath, blogName)
 
@@ -70,11 +80,15 @@ func initBlog() string {
 		}
 	}
 
-	err := helpers.InitConfig(blogPath)
+	// Initialize the blog's config
+	err := helpers.InitBlogConfig(blogPath)
 
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// Initialize the blog's config
+	helpers.InitAppConfig(blogPath)
 
 	return postDirectoryPath
 }
@@ -94,7 +108,9 @@ func createPost() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	if scanner.Scan() {
-		postTitle = scanner.Text()
+		if scanner.Text() != "" {
+			postTitle = scanner.Text()
+		}
 	} else {
 		log.Fatal("Please provide a post name")
 	}
@@ -109,18 +125,4 @@ func createPost() {
 	if err != nil {
 		fmt.Print("Couldn't create the post" + err.Error())
 	}
-
-	// postPath := helpers.GetPostsPath()
-	// fmt.Println(postPath)
-
-	/*
-		f, err := os.Create(postPath)
-
-		if err != nil {
-			fmt.Println(err)
-			fmt.Println("Error creating the post file with name : " + postTitle + ".md")
-		}
-
-		f.Sync()
-	*/
 }
