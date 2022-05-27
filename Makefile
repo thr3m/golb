@@ -5,3 +5,6 @@ init:
 
 create:
 	go run ${BASE_FILE} create
+
+parse:
+	go build && ./golb parse

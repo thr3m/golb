@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-
-	"github.com/thr3m/nojs/cli"
 )
 
 func main() {
@@ -15,5 +13,5 @@ func main() {
 		return
 	}
 
-	cli.HandleUserInput(os.Args[1:])
+	handleUserInput(os.Args[1:])
 }

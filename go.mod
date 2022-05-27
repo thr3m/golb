@@ -1,4 +1,4 @@
-module github.com/thr3m/nojs
+module github.com/thr3m/golb
 
 go 1.17
 

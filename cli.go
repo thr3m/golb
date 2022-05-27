@@ -1,4 +1,4 @@
-package cli
+package main
 
 import (
 	"bufio"
@@ -7,19 +7,18 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
-
-	"github.com/thr3m/nojs/helpers"
 )
 
 /*
 @brief Handle the user input.
 Offers 4 options: init, post, delete, deploy
-init : Initization of the blog directory
+init : Initization of the blog directory and app config
 post : Start the creation process of a blog article
 delete : Start the deletion process of a blog article
+parse : Convert markdown files into html
 deploy: TBD
 */
-func HandleUserInput(argList []string) {
+func handleUserInput(argList []string) {
 	command := argList[0]
 
 	switch command {
@@ -31,6 +30,8 @@ func HandleUserInput(argList []string) {
 		fmt.Println("Deleting a post")
 	case "deploy":
 		fmt.Println("Deploying a blog")
+	case "parse":
+		ParseMarkdown()
 	}
 }
 
@@ -81,14 +82,14 @@ func initBlog() string {
 	}
 
 	// Initialize the blog's config
-	err := helpers.InitBlogConfig(blogPath)
+	err := InitBlogConfig(blogPath)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// Initialize the blog's config
-	helpers.InitAppConfig(blogPath)
+	InitAppConfig(blogPath)
 
 	return postDirectoryPath
 }
@@ -120,7 +121,7 @@ func createPost() {
 		postDescription = scanner.Text()
 	}
 
-	err := helpers.CreatePost(postTitle, postDescription)
+	err := CreatePost(postTitle, postDescription)
 
 	if err != nil {
 		fmt.Print("Couldn't create the post" + err.Error())

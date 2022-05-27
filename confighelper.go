@@ -1,4 +1,4 @@
-package helpers
+package main
 
 import (
 	"fmt"
@@ -104,24 +104,6 @@ func InitBlogConfig(blogpath string) error {
 
 	// Update the blog config with the new blog path
 	UpdateBlogConfig(config)
-
-	/*
-
-		appConfig := map[string]string{"blogPath": blogpath}
-
-		ymlAppConfig, err3 := yaml.Marshal(appConfig)
-
-		if err3 != nil {
-			return err3
-		}
-
-		err = ioutil.WriteFile("config.yaml", ymlAppConfig, 0)
-
-		if err != nil {
-			fmt.Printf("Error writting to the app config file %s", err.Error())
-			return err
-		}
-	*/
 
 	return nil
 }
