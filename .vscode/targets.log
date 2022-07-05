@@ -1,0 +1,314 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jun  8 08:54:08 2022
+
+# Variables
+
+# environment
+JAVA_HOME = /home/thr3m/.sdkman/candidates/java/current
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+SDKMAN_PLATFORM = linuxx64
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.1854
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f142a8bd-4ce7-4056-ae02-be1775135f68.sock
+# environment
+MANDATORY_PATH = /usr/share/gconf/regolith.mandatory.path
+# environment
+VSCODE_CWD = /home/thr3m
+# environment
+WINDOWPATH = 2
+# makefile (from 'Makefile', line 1)
+BASE_FILE = main.go
+# environment
+NVM_DIR = /home/thr3m/.nvm
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+GOPATH = /home/thr3m/go
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/thr3m/Projects/golb
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/regolith:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+NVM_INC = /home/thr3m/.nvm/versions/node/v16.15.1/include/node
+# environment
+VSCODE_CODE_CACHE_PATH = /home/thr3m/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/thr3m/Projects/golb
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+NVM_BIN = /home/thr3m/.nvm/versions/node/v16.15.1/bin
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-regolith:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = regolith
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 781361
+# environment
+SDKMAN_DIR = /home/thr3m/.sdkman
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/pleb:@/tmp/.ICE-unix/1562,unix/pleb:/tmp/.ICE-unix/1562
+# automatic
+*F = $(notdir $*)
+# environment
+SDKMAN_VERSION = 5.15.0
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+ 
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 1
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/thr3m/.nvm/versions/node/v16.15.1/bin:/home/thr3m/.sdkman/candidates/java/current/bin:/home/thr3m/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_CA:en
+# automatic
+^F = $(notdir $^)
+# environment
+SDKMAN_CANDIDATES_DIR = /home/thr3m/.sdkman/candidates
+# environment
+COMPIZ_CONFIG_PROFILE = gnome-flashback
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = thr3m
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_AUTOSTART_ID = 1061b2db54f7c08532165452143914627200000015620016
+# environment
+XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = regolith
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = thr3m
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/regolith.desktop
+# makefile
+.DEFAULT_GOAL := init
+# environment
+SYSTEMD_EXEC_PID = 1438
+# environment
+DISPLAY = :0
+# environment
+USER = thr3m
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+DEFAULTS_PATH = /usr/share/gconf/regolith.default.path
+# default
+MAKE_VERSION := 4.3
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1822
+# environment
+_ = /usr/share/code/code
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+NVM_CD_FLAGS = 
+# environment
+GOMODCACHE = /home/thr3m/go/pkg/mod
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+SDKMAN_CANDIDATES_API = https://api.sdkman.io/2
+# environment
+HOME = /home/thr3m
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-cd4e9a76-1.67.2-main.sock
+# environment
+GOPROXY = https://proxy.golang.org,direct
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+XDG_MENU_PREFIX = gnome-flashback-
+# environment
+GDMSESSION = regolith
+# variable set hash-table stats:
+# Load=110/1024=11%, Rehash=0, Collisions=4/140=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 66306, inode 8389288): 15 files, no impossibilities.
+
+# 15 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+ 
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-27 13:48:15.576316264
+#  File has been updated.
+#  Successfully updated.
+
+parse:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 10):
+	go build && ./golb parse
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+init:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 4):
+	rm -rf ~/my_blog && go build && ./golb init
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+create:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 7):
+	go build && ./golb create && ls ~/my_blog/posts
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/17=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 23 / storage = 203 B / avg = 8 B
+# current buf: size = 8162 B / used = 203 B / count = 23 / avg = 8 B
+
+# strcache performance: lookups = 30 / hit rate = 23%
+# hash-table stats:
+# Load=23/8192=0%, Rehash=0, Collisions=0/30=0%
+# Finished Make data base on Wed Jun  8 08:54:08 2022
+
+ 

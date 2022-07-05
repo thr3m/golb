@@ -13,5 +13,5 @@ func main() {
 		return
 	}
 
-	handleUserInput(os.Args[1:])
+	HandleUserInput(os.Args[1:])
 }

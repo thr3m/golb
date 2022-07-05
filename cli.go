@@ -18,7 +18,7 @@ delete : Start the deletion process of a blog article
 parse : Convert markdown files into html
 deploy: TBD
 */
-func handleUserInput(argList []string) {
+func HandleUserInput(argList []string) {
 	command := argList[0]
 
 	switch command {
@@ -88,7 +88,7 @@ func initBlog() string {
 		log.Fatal(err)
 	}
 
-	// Initialize the blog's config
+	// Initialize the app's config
 	InitAppConfig(blogPath)
 
 	return postDirectoryPath
